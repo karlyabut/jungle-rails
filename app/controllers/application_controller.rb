@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   private
 
+
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
   end
