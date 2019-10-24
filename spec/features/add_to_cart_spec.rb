@@ -16,13 +16,13 @@ RSpec.feature "ProductDetails", type: :feature do
   end
 
 
-  scenario "They see product details" do
+  scenario "Cart" do
     # ACT
     visit root_path
 
     # DEBUG / VERIFY
-    click_on 'Details »', :match => :first
-    expect(page).to have_css 'section.products-show'
+    click_on 'Add', :match => :first
+    expect(page).to have_content 'My Cart (1)'
     save_screenshot
   end
 
